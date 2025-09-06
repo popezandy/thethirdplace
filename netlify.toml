@@ -1,5 +1,13 @@
 [build]
   publish = "."
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+
+# optional: skip post-processing since we're a static site
+[build.processing]
+  skip_processing = true
 
 [[redirects]]
   from = "/thank-you"
