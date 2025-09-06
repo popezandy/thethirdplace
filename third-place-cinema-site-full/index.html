@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The 3rd Place Cinema Club — Films for the Altered Mind</title>
+  <meta name="description" content="Private film society in Great Falls, MT. Fridays & Saturdays at 8pm, Women of Whimsy Wednesday Matinées at 6pm. $10 one-night, $25 monthly (in-person)."/>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0a0a; --panel:#121214; --ink:#e7e2d5; --muted:#b7b1a1; --gold:#d9b36a; --ember:#e85d3f;
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+    body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;}
+    a{color:var(--gold);text-decoration:none} a:hover{text-decoration:underline}
+    /* textured backdrop */
+    body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+      radial-gradient(1200px 400px at 50% -120px, rgba(232,93,63,.18), transparent 60%),
+      radial-gradient(900px 300px at 50% -80px, rgba(217,179,106,.18), transparent 55%),
+      linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));}
+    body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\'><filter id=\'n\'><feTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/></filter><rect width=\'100%\' height=\'100%\' filter=\'url(%23n)\' /></svg>');mix-blend-mode:overlay;}
+    header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(6px);background:rgba(11,10,10,.8);border-bottom:1px solid #222;}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+    .brand{display:flex;gap:14px;align-items:center;padding:10px 0;}
+    .brand img{height:44px;width:44px;border-radius:8px;object-fit:cover;}
+    .brand h1{font-family:'Crimson Text',Georgia,serif;margin:0;font-size:20px;letter-spacing:.3px;}
+    nav.links a{margin-left:16px;color:var(--ink);opacity:.95;font-weight:600;}
+    .hero{padding:72px 0 48px;border-bottom:1px solid #1c1c1c;}
+    .hero h2{font-family:'Crimson Text',Georgia,serif;font-size:42px;margin:10px 0 0;}
+    .tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid #2a2a2a;border-radius:999px;padding:6px 10px;}
+    .lead{font-size:18px;color:var(--muted);}
+    .cta{display:inline-flex;gap:12px;margin-top:16px;} .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #2a2a2a;background:#1a1a1c;color:var(--ink);font-weight:700;}
+    .btn.primary{background:linear-gradient(180deg,#2a2320,#1b1512);border-color:#3a2f2a;}
+    .row{display:grid;gap:24px;grid-template-columns:1fr;} @media(min-width:900px){.row-2{grid-template-columns:1.2fr 1fr;}}
+    .panel{background:var(--panel);border:1px solid #1e1e1e;border-radius:16px;padding:20px;}
+    .grid-2{display:grid;gap:18px;grid-template-columns:1fr;} @media(min-width:800px){.grid-2{grid-template-columns:1fr 1fr;}}
+    ul.clean{padding-left:18px;} .muted{color:var(--muted);}
+    .calendar-embed iframe{width:100%;min-height:640px;border:0;border-radius:12px;}
+    .anchor{scroll-margin-top:84px;}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand">
+        <img src="assets/solid_white.png" alt="Club logo">
+        <div>
+          <h1>The 3rd Place Cinema Club</h1>
+          <div class="muted" style="font-size:12px">Films for the Altered Mind — Great Falls, MT</div>
+        </div>
+      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#season">This Season</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#invite">Request Invitation</a>
+        <a href="#membership">Membership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container" style="display:grid;gap:24px;grid-template-columns:1fr;align-items:center;">
+      <div>
+        <span class="tag">Films for the Altered Mind</span>
+        <h2>The 3rd Place Cinema Club</h2>
+        <p class="lead">A private film society where neighbors gather for cult, classic, and unusual cinema — Fridays & Saturdays at 8pm, plus <strong>Women of Whimsy Wednesday Matinées at 6pm</strong>.</p>
+        <div class="cta">
+          <a class="btn primary" href="#calendar">View Calendar</a>
+          <a class="btn" href="#invite">Request Invitation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="about" class="anchor" style="margin:32px 0;">
+      <h3>About</h3>
+      <div class="row row-2">
+        <div class="panel">
+          <p>The 3rd Place Cinema Club is a community “third place” — after home and work — for film lovers in Great Falls, MT. As a private club, we approve memberships in person and share the screening address only with approved invitees.</p>
+        </div>
+        <div class="panel" style="display:flex;align-items:center;justify-content:center;text-align:center">
+          <div>
+            <h4 style="margin:0 0 8px;">Join the Movement</h4>
+            <p class="muted" style="margin:0 0 10px;">Get your membership card today — limited slots. In‑person purchase only.</p>
+            <a class="btn primary" href="#invite">Request Invitation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="season" class="anchor" style="margin:32px 0;">
+      <h3>This Season: September 2025</h3>
+      <div class="grid-2">
+        <div class="panel">
+          <div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;">Fridays · 8pm</div>
+          <ul class="clean">
+            <li><strong>Sept 5</strong> — <em>Tromeo and Juliet</em> / <em>Father’s Day</em></li>
+            <li><strong>Sept 12</strong> — <em>Bronson</em> / <em>Filth</em></li>
+            <li><strong>Sept 19</strong> — <em>Red State</em> / <em>Kill List</em></li>
+            <li><strong>Sept 26</strong> — <em>Prince of Darkness</em> / <em>In the Mouth of Madness</em></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;">Saturdays · 8pm</div>
+          <ul class="clean">
+            <li><strong>Sept 6</strong> — <em>Bunraku</em> / <em>Journey to the West</em></li>
+            <li><strong>Sept 13</strong> — <em>The Black Cauldron</em> / <em>The Last Unicorn</em></li>
+            <li><strong>Sept 20</strong> — <em>The Brothers Grimm</em> / <em>Van Helsing</em></li>
+            <li><strong>Sept 27</strong> — <em>There’s Something About Mary</em> / <em>Shallow Hal</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:16px;">
+        <div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;">Wednesdays · 6pm</div>
+        <p class="muted" style="margin:6px 0 0;">Women of Whimsy Matinées — spotlighting women in front of and behind the camera.</p>
+      </div>
+      <p class="muted" style="margin-top:8px;">$10 one‑night pass · $25 monthly membership (members get in free). Memberships are approved in person.</p>
+    </section>
+
+    <section id="calendar" class="anchor" style="margin:32px 0;">
+      <h3>Calendar</h3>
+      <div class="panel calendar-embed">
+        <!-- Replace the src URL below with your calendar's public embed URL (Settings → Integrate calendar). -->
+        <iframe src="https://calendar.google.com/calendar/embed?src=example%40gmail.com&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&bgcolor=%23121214&ctz=America%2FDenver"></iframe>
+      </div>
+      <p class="muted" style="margin-top:8px;">Want a fully themed calendar that still pulls from Google? Ask and I’ll add the custom calendar builder + poster modals.</p>
+    </section>
+
+    <section id="invite" class="anchor" style="margin:32px 0;">
+      <h3>Request Invitation & Details (Private Address)</h3>
+      <div class="panel">
+        <form name="invitation-request" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="invitation-request" />
+          <p style="display:none"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
+          <div class="row">
+            <div class="grid-2">
+              <div><label>Name<input name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #333;background:#0f0f10;color:#eee"></label></div>
+              <div><label>Email<input type="email" name="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #333;background:#0f0f10;color:#eee"></label></div>
+            </div>
+            <label>Which screening are you interested in?<input name="interest" placeholder="e.g., Sept 13 — The Last Unicorn" style="width:100%;padding:10px;border-radius:8px;border:1px solid #333;background:#0f0f10;color:#eee"></label>
+            <label>Tell us about yourself (optional)<textarea name="about" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #333;background:#0f0f10;color:#eee"></textarea></label>
+            <label><input type="checkbox" name="ack" required> I understand memberships are approved in person and address details are shared only after approval.</label>
+            <div><button class="btn primary" type="submit">Request Invitation</button></div>
+          </div>
+        </form>
+        <p class="muted" style="margin-top:8px;">Submissions land in Netlify → Forms. Turn on email notifications there.</p>
+      </div>
+    </section>
+
+    <section id="membership" class="anchor" style="margin:32px 0;">
+      <h3>Membership</h3>
+      <div class="row row-2">
+        <div class="panel">
+          <ul class="clean">
+            <li><strong>One‑night pass:</strong> $10</li>
+            <li><strong>Monthly membership:</strong> $25 (includes all screenings)</li>
+          </ul>
+          <p><strong>In‑person only.</strong> As a private club, we approve memberships at our discretion.</p>
+          <a class="btn primary" href="#invite">Get Your Membership Card Today</a>
+        </div>
+        <div class="panel">
+          <p class="muted">Perks often include early access, reserved seating blocks, and occasional partner deals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="anchor" style="margin:32px 0;">
+      <h3>Contact</h3>
+      <div class="panel">
+        <p>📍 Great Falls, MT — address shared only with approved invitees</p>
+        <p>✉ <a href="mailto:thethirdplacecinemaclub@gmail.com">thethirdplacecinemaclub@gmail.com</a></p>
+        <p>📷 Instagram: <a href="https://instagram.com/3rdplacecinemaclub" target="_blank" rel="noreferrer">@3rdplacecinemaclub</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <div>© <span id="y"></span> The 3rd Place Cinema Club</div>
+      <div><a href="#top">Back to top</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
