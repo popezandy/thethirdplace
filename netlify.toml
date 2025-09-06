@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you/"
+  status = 301
