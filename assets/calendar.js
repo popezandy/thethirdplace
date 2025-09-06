@@ -17,7 +17,19 @@ function extractPoster(desc, urlField) {
   if (urlField && /^https?:\/\//.test(urlField)) return urlField;
   return null;
 }
-
+// Turn ICS date/time into a real JS Date
+function parseICSTime(s) {
+  if (!s) return null;
+  // YYYYMMDDTHHMMSSZ  or  YYYYMMDD
+  let m = s.match(/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2})(Z)?)?$/);
+  if (m) {
+    const [_, y, mo, d, hh = "00", mm = "00", ss = "00", z = ""] = m;
+    const iso = `${y}-${mo}-${d}T${hh}:${mm}:${ss}${z ? "Z" : ""}`;
+    return new Date(iso);
+  }
+  // Fallback: let Date try
+  return new Date(s);
+}
 // Parse a minimal subset of ICS into an array of events.
 function parseICS(icsText) {
   // Handle folded lines per RFC (lines starting with space are continuations)
