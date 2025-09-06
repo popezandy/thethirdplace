@@ -63,8 +63,8 @@ function parseICS(icsText) {
     const loc = (e['LOCATION'] || '').trim();
     const poster = extractPoster(desc, url);
     // Convert to local Date (assumes DTSTART in UTC/Z or with TZID; for simplicity, rely on Date parsing)
-    const startDate = start ? new Date(start.replace(/Z$/,'')) : null;
-    const endDate = end ? new Date(end.replace(/Z$/,'')) : null;
+    const startDate = parseICSTime(start);
+    const endDate   = parseICSTime(end);
     return { title, desc, url, loc, poster, startRaw: start, endRaw: end, startDate, endDate };
   });
 }
