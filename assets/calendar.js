@@ -3,6 +3,21 @@
 
 const CAL_ENDPOINT = "/.netlify/functions/ics";
 
+async function normalizePoster(url) {
+  if (!url) return null;
+  try {
+    const m = url.match(/wikipedia\.org\/wiki\/([^?#]+)/i);
+    if (!m) return url; // already a direct image or other host
+    const title = decodeURIComponent(m[1]);
+    const r = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+    if (!r.ok) return url;
+    const data = await r.json();
+    return (data.originalimage && data.originalimage.source) ||
+           (data.thumbnail && data.thumbnail.source) || url;
+  } catch (_) {
+    return url;
+  }
+}
 // Heuristics: extract poster URL from DESCRIPTION or URL fields.
 // Use 'Poster:' prefix in your Google Calendar event description to set an explicit poster URL.
 function extractPoster(desc, urlField) {
